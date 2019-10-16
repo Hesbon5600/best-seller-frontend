@@ -8,6 +8,8 @@ import {connect} from "react-redux";
 import styles from './styles';
 import Button from "@material-ui/core/Button";
 import * as alertActions from "../../../../store/actions/alerts";
+import * as auth from '../../../../utils';
+import handleLogout from '../../../../utils/Logout';
 
 const links = [{
     title: 'Daily Deals',
@@ -27,10 +29,13 @@ class TopBar extends React.Component {
         const {
             classes,
         } = this.props;
-
+        const username = auth.getUsername();
         return (
             <AppBar className={classes.topBar}>
+                
                 <Toolbar className={classes.toolbar}>
+                {!auth.isAuthenticated()
+                ?
                     <div className={classes.authText + ' ' + classes.divTopBar}>
                             <span>Hi!</span>
                             <Link onClick={() => {
@@ -45,16 +50,18 @@ class TopBar extends React.Component {
                               Register
                           </Link>
                     </div>
+                    :
                     <div className={classes.authText + ' ' + classes.divTopBar}>
-                            <span>Hi Charles!</span>
+                            <span className='mr-3'>Hi {username}!</span>
                             <Link className={classes.authLink} style={{color: 'red'}}>
                             My Profile
                             </Link>
                             <span>|</span>
-                            <Link className={classes.authLink} id="btnLogout" style={{color: 'red'}}>
+                            <Link onClick={handleLogout} className={classes.authLink} id="btnLogout" style={{color: 'red'}}>
                              Logout
                             </Link>
                     </div>
+                }
                     <Hidden mdDown className={classes.divTopBar}>
                         <div className={classes.linksContainer}>
                             {

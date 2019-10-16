@@ -60,6 +60,7 @@ class Product extends Component {
 
     render() {
         const {classes, product, loading, locations, locationsLoading, match: {params}} = this.props;
+        console.warn(product)
 
         const isLoading = loading || !product.image || locationsLoading
         const isDiscounted = parseFloat(product.discounted_price) > 0;

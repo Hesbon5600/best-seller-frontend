@@ -1,6 +1,6 @@
 const system = {
-    appName: 'SHOPMATE',
-    serverBaseUrl: 'https://backendapi.turing.com',
+    appName: 'Best Seller',
+    serverBaseUrl: 'https://best-seller-hesbon.herokuapp.com',
     imageBaseUrl: 'https://backendapi.turing.com/images/products/',
     stripeToken: 'pk_test_NcwpaplBCuTL6I0THD44heRe'
 };

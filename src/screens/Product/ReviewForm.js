@@ -5,7 +5,7 @@ import {TextFieldFormsy} from '../../components/Formsy';
 import Formsy from 'formsy-react';
 import styles from './styles';
 
-class RegisterForm extends Component {
+class ReviewForm extends Component {
 
     form = React.createRef();
 
@@ -64,4 +64,4 @@ class RegisterForm extends Component {
     }
 }
 
-export default withStyles(styles)(RegisterForm);
+export default withStyles(styles)(ReviewForm);
