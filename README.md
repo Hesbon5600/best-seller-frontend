@@ -1,7 +1,5 @@
 # Best seller Frontend
 
-## Important Note
-Before using this template, read the template guide [here](https://docs.google.com/document/d/1F68KceOe2lUi3KDVcBEcOxwwRsZDNLmkFFYrIAcV6BQ/edit?usp=sharing)
 
 ## Introduction
 
